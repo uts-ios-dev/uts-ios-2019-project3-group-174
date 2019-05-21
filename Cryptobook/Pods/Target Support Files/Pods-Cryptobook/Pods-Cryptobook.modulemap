@@ -1,0 +1,6 @@
+framework module Pods_Cryptobook {
+  umbrella header "Pods-Cryptobook-umbrella.h"
+
+  export *
+  module * { export * }
+}
