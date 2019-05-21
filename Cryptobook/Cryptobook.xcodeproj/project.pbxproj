@@ -29,6 +29,7 @@
 		DEB8A0F0228F8EE600329C00 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0DE228F8EE600329C00 /* Montserrat-Black.ttf */; };
 		DEB8A0F1228F8EE600329C00 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0DF228F8EE600329C00 /* Montserrat-Regular.ttf */; };
 		DEB8A0F2228F8EE600329C00 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */; };
+		DEBEE9D222942BC20069C6DC /* NetworkingClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D122942BC20069C6DC /* NetworkingClientController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		DEB8A0DE228F8EE600329C00 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		DEB8A0DF228F8EE600329C00 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		DEBEE9D122942BC20069C6DC /* NetworkingClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClientController.swift; sourceTree = "<group>"; };
 		F8FB4C3FF9119930E644A3E5 /* Pods-CryptobookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +135,6 @@
 				7DF1E2C8D5847D9C6AF43FCF /* Pods-CryptobookUITests.debug.xcconfig */,
 				40B507083FBBD2CDA7FDBB8F /* Pods-CryptobookUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */,
+				DEBEE9D122942BC20069C6DC /* NetworkingClientController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -437,12 +439,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Cryptobook/Pods-Cryptobook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBEE9D222942BC20069C6DC /* NetworkingClientController.swift in Sources */,
 				DEB8A0A2228E290000329C00 /* SecondViewController.swift in Sources */,
 				DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */,
 				DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */,
