@@ -6,7 +6,7 @@ target 'Cryptobook' do
 
   # Pods for Cryptobook
 
-  pod 'Alamofire', '5.0.0-beta.6'
+  pod 'Alamofire', '4.6.0'
   pod 'SwiftyJSON'
 
   target 'CryptobookTests' do

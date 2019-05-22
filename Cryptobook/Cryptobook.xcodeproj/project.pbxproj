@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18EC12C240AF13ED01B5F5A8 /* Pods_Cryptobook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70F9D04C53FA5867BECC1AD /* Pods_Cryptobook.framework */; };
-		45EDEB59D71486BAA3F85D7C /* Pods_CryptobookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F6D4F1038A5BFF4992F58D /* Pods_CryptobookTests.framework */; };
-		DD27E420251A0EB0B652EE55 /* Pods_CryptobookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB6D3FEED2A01735DA256BF /* Pods_CryptobookUITests.framework */; };
+		8B2A00AFE88FBA395D4935D7 /* Pods_CryptobookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33045CAE7DA3E9012AF14072 /* Pods_CryptobookTests.framework */; };
 		DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */; };
 		DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09D228E290000329C00 /* AppDelegate.swift */; };
 		DEB8A0A0228E290000329C00 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09F228E290000329C00 /* FirstViewController.swift */; };
@@ -29,7 +27,8 @@
 		DEB8A0F0228F8EE600329C00 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0DE228F8EE600329C00 /* Montserrat-Black.ttf */; };
 		DEB8A0F1228F8EE600329C00 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0DF228F8EE600329C00 /* Montserrat-Regular.ttf */; };
 		DEB8A0F2228F8EE600329C00 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */; };
-		DEBEE9D222942BC20069C6DC /* NetworkingClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D122942BC20069C6DC /* NetworkingClientController.swift */; };
+		EEA68571E0A681ED891F3DC9 /* Pods_CryptobookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A96B2E0D405FC15AB15F30 /* Pods_CryptobookUITests.framework */; };
+		EFB7C790D2810CEE0300953C /* Pods_Cryptobook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2470CB7C80F0979AB0895EA0 /* Pods_Cryptobook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14C4356F0ACD32BC788FD136 /* Pods-Cryptobook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.release.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.release.xcconfig"; sourceTree = "<group>"; };
-		29A215463F3D6D0CC8DFD6F5 /* Pods-Cryptobook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.debug.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.debug.xcconfig"; sourceTree = "<group>"; };
-		40B507083FBBD2CDA7FDBB8F /* Pods-CryptobookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookUITests.release.xcconfig"; path = "Target Support Files/Pods-CryptobookUITests/Pods-CryptobookUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7DF1E2C8D5847D9C6AF43FCF /* Pods-CryptobookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookUITests/Pods-CryptobookUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8563B013E3D3318F8B5A6751 /* Pods-CryptobookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.release.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.release.xcconfig"; sourceTree = "<group>"; };
-		98F6D4F1038A5BFF4992F58D /* Pods_CryptobookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptobookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AB6D3FEED2A01735DA256BF /* Pods_CryptobookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptobookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A70F9D04C53FA5867BECC1AD /* Pods_Cryptobook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptobook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2470CB7C80F0979AB0895EA0 /* Pods_Cryptobook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptobook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33045CAE7DA3E9012AF14072 /* Pods_CryptobookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptobookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A3B77706E1F9DAC65399DE /* Pods-CryptobookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.release.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CBDBB962F0953FDAD41ADCE /* Pods-Cryptobook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.release.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.release.xcconfig"; sourceTree = "<group>"; };
+		533018B89F931D325A30FFAF /* Pods-CryptobookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookUITests/Pods-CryptobookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		54F059926A9A0E850AB689C8 /* Pods-CryptobookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookUITests.release.xcconfig"; path = "Target Support Files/Pods-CryptobookUITests/Pods-CryptobookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		99A96B2E0D405FC15AB15F30 /* Pods_CryptobookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptobookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAC1EFC532BB2C18CF2BCDC /* Pods-CryptobookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C446919067E22E2D950224ED /* Pods-Cryptobook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.debug.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.debug.xcconfig"; sourceTree = "<group>"; };
 		DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DEB8A09A228E290000329C00 /* Cryptobook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptobook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB8A09D228E290000329C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +83,6 @@
 		DEB8A0DE228F8EE600329C00 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		DEB8A0DF228F8EE600329C00 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
-		DEBEE9D122942BC20069C6DC /* NetworkingClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClientController.swift; sourceTree = "<group>"; };
-		F8FB4C3FF9119930E644A3E5 /* Pods-CryptobookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EC12C240AF13ED01B5F5A8 /* Pods_Cryptobook.framework in Frameworks */,
+				EFB7C790D2810CEE0300953C /* Pods_Cryptobook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45EDEB59D71486BAA3F85D7C /* Pods_CryptobookTests.framework in Frameworks */,
+				8B2A00AFE88FBA395D4935D7 /* Pods_CryptobookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,41 +106,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD27E420251A0EB0B652EE55 /* Pods_CryptobookUITests.framework in Frameworks */,
+				EEA68571E0A681ED891F3DC9 /* Pods_CryptobookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		593359FC16226B0D4AF9D1EE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A70F9D04C53FA5867BECC1AD /* Pods_Cryptobook.framework */,
-				98F6D4F1038A5BFF4992F58D /* Pods_CryptobookTests.framework */,
-				9AB6D3FEED2A01735DA256BF /* Pods_CryptobookUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		68C841C7A3CDAC08A6480927 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				29A215463F3D6D0CC8DFD6F5 /* Pods-Cryptobook.debug.xcconfig */,
-				14C4356F0ACD32BC788FD136 /* Pods-Cryptobook.release.xcconfig */,
-				F8FB4C3FF9119930E644A3E5 /* Pods-CryptobookTests.debug.xcconfig */,
-				8563B013E3D3318F8B5A6751 /* Pods-CryptobookTests.release.xcconfig */,
-				7DF1E2C8D5847D9C6AF43FCF /* Pods-CryptobookUITests.debug.xcconfig */,
-				40B507083FBBD2CDA7FDBB8F /* Pods-CryptobookUITests.release.xcconfig */,
+				C446919067E22E2D950224ED /* Pods-Cryptobook.debug.xcconfig */,
+				4CBDBB962F0953FDAD41ADCE /* Pods-Cryptobook.release.xcconfig */,
+				9DAC1EFC532BB2C18CF2BCDC /* Pods-CryptobookTests.debug.xcconfig */,
+				44A3B77706E1F9DAC65399DE /* Pods-CryptobookTests.release.xcconfig */,
+				533018B89F931D325A30FFAF /* Pods-CryptobookUITests.debug.xcconfig */,
+				54F059926A9A0E850AB689C8 /* Pods-CryptobookUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		84611CB57C60B7C89190DA24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2470CB7C80F0979AB0895EA0 /* Pods_Cryptobook.framework */,
+				33045CAE7DA3E9012AF14072 /* Pods_CryptobookTests.framework */,
+				99A96B2E0D405FC15AB15F30 /* Pods_CryptobookUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DE3DAF102293C5D900388088 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */,
-				DEBEE9D122942BC20069C6DC /* NetworkingClientController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,7 +152,7 @@
 				DEB8A0BE228E290100329C00 /* CryptobookUITests */,
 				DEB8A09B228E290000329C00 /* Products */,
 				68C841C7A3CDAC08A6480927 /* Pods */,
-				593359FC16226B0D4AF9D1EE /* Frameworks */,
+				84611CB57C60B7C89190DA24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,11 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEB8A0C4228E290100329C00 /* Build configuration list for PBXNativeTarget "Cryptobook" */;
 			buildPhases = (
-				E9D0B5CB7CAECA49E5D73B86 /* [CP] Check Pods Manifest.lock */,
+				1BD42522D8416154D48DF0A4 /* [CP] Check Pods Manifest.lock */,
 				DEB8A096228E290000329C00 /* Sources */,
 				DEB8A097228E290000329C00 /* Frameworks */,
 				DEB8A098228E290000329C00 /* Resources */,
-				DCF36DA9286C1969795C7C47 /* [CP] Embed Pods Frameworks */,
+				79EEF215082F7D77DBB45166 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,7 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEB8A0C7228E290100329C00 /* Build configuration list for PBXNativeTarget "CryptobookTests" */;
 			buildPhases = (
-				070C544B3F0999C5DDF20D3F /* [CP] Check Pods Manifest.lock */,
+				F24FA4CA2ABADA2CD4DB0CDF /* [CP] Check Pods Manifest.lock */,
 				DEB8A0AC228E290100329C00 /* Sources */,
 				DEB8A0AD228E290100329C00 /* Frameworks */,
 				DEB8A0AE228E290100329C00 /* Resources */,
@@ -289,7 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEB8A0CA228E290100329C00 /* Build configuration list for PBXNativeTarget "CryptobookUITests" */;
 			buildPhases = (
-				7ADCB61684A23C33F8A704B7 /* [CP] Check Pods Manifest.lock */,
+				D3B849386142D1FFEC3970C5 /* [CP] Check Pods Manifest.lock */,
 				DEB8A0B7228E290100329C00 /* Sources */,
 				DEB8A0B8228E290100329C00 /* Frameworks */,
 				DEB8A0B9228E290100329C00 /* Resources */,
@@ -316,13 +313,16 @@
 				TargetAttributes = {
 					DEB8A099228E290000329C00 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					DEB8A0AF228E290100329C00 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = DEB8A099228E290000329C00;
 					};
 					DEB8A0BA228E290100329C00 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = DEB8A099228E290000329C00;
 					};
 				};
@@ -385,7 +385,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		070C544B3F0999C5DDF20D3F /* [CP] Check Pods Manifest.lock */ = {
+		1BD42522D8416154D48DF0A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,36 +400,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CryptobookTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Cryptobook-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7ADCB61684A23C33F8A704B7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CryptobookUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCF36DA9286C1969795C7C47 /* [CP] Embed Pods Frameworks */ = {
+		79EEF215082F7D77DBB45166 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,7 +431,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cryptobook/Pods-Cryptobook-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E9D0B5CB7CAECA49E5D73B86 /* [CP] Check Pods Manifest.lock */ = {
+		D3B849386142D1FFEC3970C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,7 +446,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cryptobook-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CryptobookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F24FA4CA2ABADA2CD4DB0CDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptobookTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -482,7 +482,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEBEE9D222942BC20069C6DC /* NetworkingClientController.swift in Sources */,
 				DEB8A0A2228E290000329C00 /* SecondViewController.swift in Sources */,
 				DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */,
 				DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */,
@@ -659,7 +658,7 @@
 		};
 		DEB8A0C5228E290100329C00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29A215463F3D6D0CC8DFD6F5 /* Pods-Cryptobook.debug.xcconfig */;
+			baseConfigurationReference = C446919067E22E2D950224ED /* Pods-Cryptobook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -678,7 +677,7 @@
 		};
 		DEB8A0C6228E290100329C00 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14C4356F0ACD32BC788FD136 /* Pods-Cryptobook.release.xcconfig */;
+			baseConfigurationReference = 4CBDBB962F0953FDAD41ADCE /* Pods-Cryptobook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -697,7 +696,7 @@
 		};
 		DEB8A0C8228E290100329C00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8FB4C3FF9119930E644A3E5 /* Pods-CryptobookTests.debug.xcconfig */;
+			baseConfigurationReference = 9DAC1EFC532BB2C18CF2BCDC /* Pods-CryptobookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,7 +718,7 @@
 		};
 		DEB8A0C9228E290100329C00 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8563B013E3D3318F8B5A6751 /* Pods-CryptobookTests.release.xcconfig */;
+			baseConfigurationReference = 44A3B77706E1F9DAC65399DE /* Pods-CryptobookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -741,7 +740,7 @@
 		};
 		DEB8A0CB228E290100329C00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DF1E2C8D5847D9C6AF43FCF /* Pods-CryptobookUITests.debug.xcconfig */;
+			baseConfigurationReference = 533018B89F931D325A30FFAF /* Pods-CryptobookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,7 +761,7 @@
 		};
 		DEB8A0CC228E290100329C00 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B507083FBBD2CDA7FDBB8F /* Pods-CryptobookUITests.release.xcconfig */;
+			baseConfigurationReference = 54F059926A9A0E850AB689C8 /* Pods-CryptobookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
