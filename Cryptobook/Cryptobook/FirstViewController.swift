@@ -18,11 +18,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let networkingClient = NetworkingClient()
     let formatter = NumberFormatter()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         networkingClient.getCryptocurrencies(table: tableView)
-        setupView()
+        networkingClient.getGlobalData(label1: marketcapLabel, label2: btcdLabel)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,11 +52,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
-    
-    func setupView() {
+    func setupTableView() {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 4
+        tableView.backgroundColor = UIColor.clear
+        
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        tableView.refreshControl!.addTarget(self, action: #selector(refreshCryptoData(_:)), for: .valueChanged)
+        tableView.refreshControl!.tintColor = UIColor.white
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Asset Data...")
+    }
+    
+    @objc private func refreshCryptoData(_ sender: Any) {
+        // Fetch Weather Data
+        networkingClient.getCryptocurrencies(table: tableView)
+        networkingClient.getGlobalData(label1: marketcapLabel, label2: btcdLabel)
+        
+        tableView.refreshControl!.endRefreshing()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

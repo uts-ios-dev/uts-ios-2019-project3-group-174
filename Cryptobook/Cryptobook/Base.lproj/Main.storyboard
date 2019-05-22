@@ -41,14 +41,14 @@
                                                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="27"/>
                                                 </variation>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-Hv-pCE">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-Hv-pCE">
                                                 <rect key="frame" x="0.0" y="40.5" width="300" height="13"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="V05-Vp-UAz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="13"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V05-Vp-UAz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="13"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market Cap:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCl-w0-pkJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="13"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="13"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
                                                                 <color key="textColor" white="0.9317476455" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -56,8 +56,8 @@
                                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250.63 Bn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSh-Va-2Dh">
-                                                                <rect key="frame" x="81" y="0.0" width="69" height="13"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250.63 Bn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSh-Va-2Dh">
+                                                                <rect key="frame" x="87.5" y="0.0" width="87.5" height="13"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
                                                                 <color key="textColor" red="0.0" green="0.66213613013698636" blue="0.9667433647260274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -70,22 +70,23 @@
                                                             <constraint firstItem="XCl-w0-pkJ" firstAttribute="width" secondItem="V05-Vp-UAz" secondAttribute="width" multiplier="0.5" id="4ng-RM-4Cs"/>
                                                             <constraint firstItem="qSh-Va-2Dh" firstAttribute="height" secondItem="V05-Vp-UAz" secondAttribute="height" id="ONw-fc-HsC"/>
                                                             <constraint firstItem="XCl-w0-pkJ" firstAttribute="height" secondItem="V05-Vp-UAz" secondAttribute="height" id="UIw-C8-2v0"/>
+                                                            <constraint firstItem="qSh-Va-2Dh" firstAttribute="width" secondItem="V05-Vp-UAz" secondAttribute="width" multiplier="0.5" id="t3w-SH-gS2"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hRB-rm-4YQ">
-                                                        <rect key="frame" x="150" y="0.0" width="150" height="13"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRB-rm-4YQ">
+                                                        <rect key="frame" x="175" y="0.0" width="125" height="13"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC-D:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzi-14-pGv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="13"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="13"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
-                                                                <color key="textColor" white="0.9317476455" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55.5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN2-Q6-jmQ">
-                                                                <rect key="frame" x="81" y="0.0" width="69" height="13"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55.5%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN2-Q6-jmQ">
+                                                                <rect key="frame" x="50" y="0.0" width="75" height="13"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
                                                                 <color key="textColor" red="0.0" green="0.66274509803921566" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -96,7 +97,8 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="Mzi-14-pGv" firstAttribute="height" secondItem="hRB-rm-4YQ" secondAttribute="height" id="2Dn-pO-I7y"/>
-                                                            <constraint firstItem="Mzi-14-pGv" firstAttribute="width" secondItem="hRB-rm-4YQ" secondAttribute="width" multiplier="0.5" id="Je5-tE-pv2"/>
+                                                            <constraint firstItem="Mzi-14-pGv" firstAttribute="width" secondItem="hRB-rm-4YQ" secondAttribute="width" multiplier="0.4" id="Je5-tE-pv2"/>
+                                                            <constraint firstItem="rN2-Q6-jmQ" firstAttribute="width" secondItem="hRB-rm-4YQ" secondAttribute="width" multiplier="0.6" id="M7Z-Wr-ymu"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>

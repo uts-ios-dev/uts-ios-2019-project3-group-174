@@ -18,8 +18,6 @@ class NetworkingClient {
     let urlForCryptocurrencies: String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h"
     let urlForGlobalData = "https://api.coingecko.com/api/v3/global"
     
-    
-    
     func getCryptocurrencies(table: UITableView) -> Void {
         Alamofire.request(urlForCryptocurrencies).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
@@ -36,19 +34,30 @@ class NetworkingClient {
         }
     }
     
-    /*func getGlobalData(label1: UILabel, label2: UILabel) -> Void {
+    func getGlobalData(label1: UILabel, label2: UILabel) -> Void {
+        
         Alamofire.request(urlForGlobalData).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let json = JSON(responseData.result.value!)
                 
-                if let resultData = json.dictionary {
-                    self.globalDataResultsDict = resultData as [String: [String:Any]]
+                if let resultData = json.dictionaryObject {
+                    self.globalDataResultsDict = resultData as! [String: [String:Any]]
                 }
                 if let data = self.globalDataResultsDict["data"] {
-                    label1.text = String(self.globalDataResultsDict["total_market_cap"]["usd"] as! Double)
+                    if let _ = data["total_market_cap"] {
+                        let marketCapData = data["total_market_cap"] as! [String:Double]
+                        var shrunkMarketCap: Double = marketCapData["usd"]!
+                        shrunkMarketCap = shrunkMarketCap/1000000000
+                        let formattedMarketCap = String(format: "%.2f",shrunkMarketCap)
+                        label1.text = "$\(formattedMarketCap) Bn"
+                    }
+                    if let _ = data["market_cap_percentage"] {
+                        let marketCapPercentageData = data["market_cap_percentage"] as! [String:Double]
+                        label2.text = String(format: "%.3f",marketCapPercentageData["btc"]!) + "%"
+                    }
                 }
             }
         }
-    }*/
+    }
     
 }
