@@ -27,6 +27,8 @@
 		DEB8A0F0228F8EE600329C00 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0DE228F8EE600329C00 /* Montserrat-Black.ttf */; };
 		DEB8A0F1228F8EE600329C00 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0DF228F8EE600329C00 /* Montserrat-Regular.ttf */; };
 		DEB8A0F2228F8EE600329C00 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */; };
+		DEBEE9D42294DA1C0069C6DC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D32294DA1C0069C6DC /* Extensions.swift */; };
+		DEBEE9D62294DC740069C6DC /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */; };
 		EEA68571E0A681ED891F3DC9 /* Pods_CryptobookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A96B2E0D405FC15AB15F30 /* Pods_CryptobookUITests.framework */; };
 		EFB7C790D2810CEE0300953C /* Pods_Cryptobook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2470CB7C80F0979AB0895EA0 /* Pods_Cryptobook.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		DEB8A0DE228F8EE600329C00 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		DEB8A0DF228F8EE600329C00 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		DEBEE9D32294DA1C0069C6DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */,
+				DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 		DEB8A0CF228F8E0900329C00 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				DEBEE9D32294DA1C0069C6DC /* Extensions.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -482,7 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBEE9D42294DA1C0069C6DC /* Extensions.swift in Sources */,
 				DEB8A0A2228E290000329C00 /* SecondViewController.swift in Sources */,
+				DEBEE9D62294DC740069C6DC /* NetworkingClient.swift in Sources */,
 				DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */,
 				DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */,
 				DEB8A0A0228E290000329C00 /* FirstViewController.swift in Sources */,

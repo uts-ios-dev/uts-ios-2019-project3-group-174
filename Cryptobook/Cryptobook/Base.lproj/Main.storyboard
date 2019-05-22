@@ -116,6 +116,7 @@
                                 <rect key="frame" x="0.0" y="86.5" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.9317476455" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.10980392160000001" green="0.2666666667" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="yBg-sP-ut8">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -159,7 +160,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+9.01%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-sc-T7C">
                                                             <rect key="frame" x="0.0" y="0.0" width="77.5" height="60.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
-                                                            <color key="textColor" red="0.034458699410792736" green="0.75584946065989844" blue="0.078825043104578607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.035294117647058823" green="0.75686274509803919" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
@@ -232,7 +233,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+9.01%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-ES-ORZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="80.5" height="60.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
-                                                            <color key="textColor" red="0.96214704949999996" green="0.30238962009999998" blue="0.30636569009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.96078431372549022" green="0.30196078431372547" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
@@ -283,7 +284,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="acW-dT-cKf">
                         <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                     </tabBarItem>
