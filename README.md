@@ -1,3 +1,5 @@
-# Project 3
+# Cryptobook
 
-Populate this README.md file with relevant information about your project.
+UTS iOS Development assignment 3
+
+Cryptocurrency app that fetches top 50 currency prices and their details and allows the user to favorite and make them much more accessible.
