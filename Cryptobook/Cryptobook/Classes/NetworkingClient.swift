@@ -18,7 +18,8 @@ class NetworkingClient {
     let urlForCryptocurrencies: String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h"
     let urlForGlobalData = "https://api.coingecko.com/api/v3/global"
     
-    func getCryptocurrencies(table: UITableView) -> Void {
+    func getCryptocurrencies(completion: @escaping ([Asset]) -> Void) {
+        var assets: [Asset] = []
         Alamofire.request(urlForCryptocurrencies).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let json = JSON(responseData.result.value!)
@@ -27,15 +28,32 @@ class NetworkingClient {
                     self.resultsArray = resultData as! [[String:AnyObject]]
                 }
                 if self.resultsArray.count > 0 {
-                    self.numberOfValuesInResult = self.resultsArray.count
-                    table.reloadData()
+                    for result in self.resultsArray {
+                        let asset: Asset = Asset(
+                            id: result["id"] as! String,
+                            name: result["name"] as! String,
+                            symbol: result["symbol"] as! String,
+                            imageURL: result["image"] as! String,
+                            currentPrice: result["current_price"] as! Double,
+                            marketCap: result["market_cap"] as! Double,
+                            marketCapRank: result["market_cap_rank"] as! Int,
+                            lastHigh: result["high_24h"] as! Double,
+                            lastLow: result["low_24h"] as! Double,
+                            priceChange: result["price_change_24h"] as! Double,
+                            priceChangeInPercentage: result["price_change_percentage_24h"] as! Double,
+                            supply: result["total_supply"] as? Int ?? 000)
+                        assets.append(asset)
+                    }
+                    completion(assets)
                 }
             }
         }
     }
     
-    func getGlobalData(label1: UILabel, label2: UILabel) -> Void {
-        
+    func getGlobalData(completion: @escaping (GlobalData) -> Void) {
+        var marketCap: String = ""
+        var btcDominance: String = ""
+        var globalData: GlobalData = GlobalData(totalMarketCap: "0", btcDominance: "0")
         Alamofire.request(urlForGlobalData).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let json = JSON(responseData.result.value!)
@@ -46,18 +64,20 @@ class NetworkingClient {
                 if let data = self.globalDataResultsDict["data"] {
                     if let _ = data["total_market_cap"] {
                         let marketCapData = data["total_market_cap"] as! [String:Double]
-                        var shrunkMarketCap: Double = marketCapData["usd"]!
-                        shrunkMarketCap = shrunkMarketCap/1000000000
-                        let formattedMarketCap = String(format: "%.2f",shrunkMarketCap)
-                        label1.text = "$\(formattedMarketCap) Bn"
+                        let shrunkMarketCap: Double = marketCapData["usd"]!
+                        marketCap = "$" + String(format: "%.2f",shrunkMarketCap/1000000000) + " Bn"
                     }
                     if let _ = data["market_cap_percentage"] {
                         let marketCapPercentageData = data["market_cap_percentage"] as! [String:Double]
-                        label2.text = String(format: "%.3f",marketCapPercentageData["btc"]!) + "%"
+                        btcDominance = String(format: "%.3f",marketCapPercentageData["btc"]!) + "%"
                     }
                 }
             }
+            let data: GlobalData = GlobalData(totalMarketCap: marketCap, btcDominance: btcDominance)
+            globalData = data
+            completion(globalData)
         }
+        
     }
     
 }

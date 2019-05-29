@@ -10,8 +10,7 @@
 		8B2A00AFE88FBA395D4935D7 /* Pods_CryptobookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33045CAE7DA3E9012AF14072 /* Pods_CryptobookTests.framework */; };
 		DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */; };
 		DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09D228E290000329C00 /* AppDelegate.swift */; };
-		DEB8A0A0228E290000329C00 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09F228E290000329C00 /* FirstViewController.swift */; };
-		DEB8A0A2228E290000329C00 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A0A1228E290000329C00 /* SecondViewController.swift */; };
+		DEB8A0A0228E290000329C00 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09F228E290000329C00 /* HomeViewController.swift */; };
 		DEB8A0A5228E290000329C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0A3228E290000329C00 /* Main.storyboard */; };
 		DEB8A0A7228E290100329C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0A6228E290100329C00 /* Assets.xcassets */; };
 		DEB8A0AA228E290100329C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0A8228E290100329C00 /* LaunchScreen.storyboard */; };
@@ -29,6 +28,7 @@
 		DEB8A0F2228F8EE600329C00 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */; };
 		DEBEE9D42294DA1C0069C6DC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D32294DA1C0069C6DC /* Extensions.swift */; };
 		DEBEE9D62294DC740069C6DC /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */; };
+		DEBEE9D82297A92D0069C6DC /* NetworkingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEE9D72297A92D0069C6DC /* NetworkingModels.swift */; };
 		EEA68571E0A681ED891F3DC9 /* Pods_CryptobookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A96B2E0D405FC15AB15F30 /* Pods_CryptobookUITests.framework */; };
 		EFB7C790D2810CEE0300953C /* Pods_Cryptobook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2470CB7C80F0979AB0895EA0 /* Pods_Cryptobook.framework */; };
 /* End PBXBuildFile section */
@@ -63,8 +63,7 @@
 		DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DEB8A09A228E290000329C00 /* Cryptobook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptobook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB8A09D228E290000329C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEB8A09F228E290000329C00 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DEB8A0A1228E290000329C00 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DEB8A09F228E290000329C00 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DEB8A0A4228E290000329C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEB8A0A6228E290100329C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEB8A0A9228E290100329C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		DEB8A0E0228F8EE600329C00 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		DEBEE9D32294DA1C0069C6DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
+		DEBEE9D72297A92D0069C6DC /* NetworkingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +143,7 @@
 		DE3DAF102293C5D900388088 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */,
-				DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */,
+				DEB8A09F228E290000329C00 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,12 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				DE3DAF102293C5D900388088 /* Controllers */,
-				DEB8A0CF228F8E0900329C00 /* Misc */,
+				DEB8A0CF228F8E0900329C00 /* Classes */,
 				DEB8A0CE228F8DF600329C00 /* Fonts */,
 				DEB8A0CD228F8DDC00329C00 /* Models */,
 				DEB8A09D228E290000329C00 /* AppDelegate.swift */,
-				DEB8A09F228E290000329C00 /* FirstViewController.swift */,
-				DEB8A0A1228E290000329C00 /* SecondViewController.swift */,
 				DEB8A0A3228E290000329C00 /* Main.storyboard */,
 				DEB8A0A6228E290100329C00 /* Assets.xcassets */,
 				DEB8A0A8228E290100329C00 /* LaunchScreen.storyboard */,
@@ -210,6 +207,8 @@
 		DEB8A0CD228F8DDC00329C00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */,
+				DEBEE9D72297A92D0069C6DC /* NetworkingModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,12 +221,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		DEB8A0CF228F8E0900329C00 /* Misc */ = {
+		DEB8A0CF228F8E0900329C00 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DEBEE9D52294DC740069C6DC /* NetworkingClient.swift */,
 				DEBEE9D32294DA1C0069C6DC /* Extensions.swift */,
 			);
-			path = Misc;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		DEB8A0D0228F8EE600329C00 /* Montserrat */ = {
@@ -488,12 +488,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBEE9D82297A92D0069C6DC /* NetworkingModels.swift in Sources */,
 				DEBEE9D42294DA1C0069C6DC /* Extensions.swift in Sources */,
-				DEB8A0A2228E290000329C00 /* SecondViewController.swift in Sources */,
 				DEBEE9D62294DC740069C6DC /* NetworkingClient.swift in Sources */,
 				DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */,
 				DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */,
-				DEB8A0A0228E290000329C00 /* FirstViewController.swift in Sources */,
+				DEB8A0A0228E290000329C00 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

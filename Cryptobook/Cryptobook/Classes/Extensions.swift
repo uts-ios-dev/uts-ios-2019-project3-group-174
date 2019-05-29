@@ -8,6 +8,11 @@
 
 import Foundation
 import UIKit
+
+extension UIColor {
+    static let positiveGreen = hexStringToUIColor(hex: "#09C114")
+    static let negativeRed = hexStringToUIColor(hex: "#F54D4E")
+}
 func hexStringToUIColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
     
