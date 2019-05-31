@@ -6,17 +6,18 @@
 //  Copyright © 2019 Santiago . All rights reserved.
 //
 
+//modules
 import UIKit
 import Alamofire
 import SwiftyJSON
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+    //outlets
     @IBOutlet weak var marketCapLabelHome: UILabel!
     @IBOutlet weak var BtcdLabelHome: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    
+    //variables
     var defaults = UserDefaults.standard
     let favoritesKeyString = "favorites_IDs"
     
@@ -31,7 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let formatter = NumberFormatter()
     private let refreshControl = UIRefreshControl()
     
-    
+    //functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setFavorites()
