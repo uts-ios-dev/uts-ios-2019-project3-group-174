@@ -39,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         refreshCryptoData()
         tableView.reloadData()
     }
-     func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
@@ -83,13 +83,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     // Leading Actions in Row
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let asset = self.assets[indexPath.row]
         
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { (action, view, nil) in
             self.addToFavorites(asset: asset)
+            print(self.favoritesIDs)
             tableView.reloadData()
+            
         }
         
         favoriteAction.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
@@ -102,38 +107,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return swipeActionConfig
     }
     
-    // Trailing Actions in Row
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        var asset: Asset {
-            if favoritesOnly {
-                print(indexPath.row)
-                return favorites[indexPath.row]
-            }
-            return assets[indexPath.row]
-        }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        let unfavoriteAction = UIContextualAction(style: .destructive, title: "Unfavorite") { (action, view, nil) in
-            
-            var removeFromIndex = 0
-            for (index,asset) in self.favorites.enumerated() {
-                if asset.id == asset.id {
-                    removeFromIndex = index
-                }
-            }
-            self.favorites.remove(at: removeFromIndex)
-            tableView.beginUpdates()
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            tableView.endUpdates()
-            self.removeFromFavorites(asset: asset)
-        }
-        
-        let swipeActionConfig = UISwipeActionsConfiguration(actions: [unfavoriteAction])
-        swipeActionConfig.performsFirstActionWithFullSwipe = false
-        let inFavorites = self.favorites.contains { $0.id == asset.id }
-        if inFavorites {
-            return swipeActionConfig
-        }
-        return UISwipeActionsConfiguration(actions: [])
     }
     
     func setupTableView() {
@@ -170,15 +145,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func setFavorites() {
+        favorites = []
         favoritesIDs = defaults.array(forKey: favoritesKeyString) as? [String] ?? []
         for id in favoritesIDs {
-            let inFavorites = self.favorites.contains { $0.id == id }
-            if !inFavorites {
-                if let index = assets.firstIndex(where: { $0.id == id }) {
-                    self.favorites.append(assets[index])
-                }
+            if let index = assets.firstIndex(where: { $0.id == id }) {
+                self.favorites.append(assets[index])
             }
         }
+        
     }
     
     func setGlobalData(gData: GlobalData) -> Void {
