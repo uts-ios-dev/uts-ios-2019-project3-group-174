@@ -27,3 +27,13 @@ struct GlobalData {
     let totalMarketCap : String
     let btcDominance: String
 }
+
+struct AssetPriceList {
+    let name : String
+    let aud : Double
+    let usd : Double
+    let mxn : Double
+    let gbp : Double
+    let eur : Double
+    let cad : Double
+}

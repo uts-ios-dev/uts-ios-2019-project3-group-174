@@ -128,8 +128,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            print(indexPath.row)
-            print(favorites[indexPath.row].name)
             removeFromFavorites(asset: favorites[indexPath.row])
             setFavorites()
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)

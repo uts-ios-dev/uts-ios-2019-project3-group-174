@@ -14,9 +14,13 @@ class NetworkingClient {
     
     var resultsArray = [[String:Any]]()
     var globalDataResultsDict = [String : [String:Any]]()
+    var coinPriceResultDict = [String : [String:Double]]()
     var numberOfValuesInResult = 0
     let urlForCryptocurrencies: String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h"
+    
     let urlForGlobalData = "https://api.coingecko.com/api/v3/global"
+    
+    var urlForCoinPrices = ""
     
     func getCryptocurrencies(completion: @escaping ([Asset]) -> Void) {
         var assets: [Asset] = []
@@ -43,6 +47,10 @@ class NetworkingClient {
                             priceChangeInPercentage: result["price_change_percentage_24h"] as! Double,
                             supply: result["total_supply"] as? Int ?? 000)
                         assets.append(asset)
+                    }
+                    if (self.urlForCoinPrices == "") {
+                        self.urlForCoinPrices = "https://api.coingecko.com/api/v3/simple/price?ids=\(self.setIDParameterInURLForPrices(assets: assets))&vs_currencies=aud%2Cusd%2Cmxn%2Ceur%2Cgbp%2Ccad"
+                        print(self.urlForCoinPrices)
                     }
                     completion(assets)
                 }
@@ -78,6 +86,39 @@ class NetworkingClient {
             completion(globalData)
         }
         
+    }
+    
+    func getCoinPrices(completion: @escaping ([AssetPriceList]) -> Void) {
+        var assetPriceLists: [AssetPriceList] = []
+        Alamofire.request(urlForCoinPrices).responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let json = JSON(responseData.result.value!)
+                
+                if let resultData = json.dictionaryObject {
+                    self.coinPriceResultDict = resultData as! [String: [String:Double]]
+                }
+                for (coinName,priceList) in self.coinPriceResultDict {
+                    let assetPriceList = AssetPriceList(
+                        name: coinName,
+                        aud: priceList["aud"]!,
+                        usd: priceList["usd"]!,
+                        mxn: priceList["mxn"]!,
+                        gbp: priceList["gbp"]!,
+                        eur: priceList["eur"]!,
+                        cad: priceList["cad"]!)
+                    assetPriceLists.append(assetPriceList)
+                }
+            }            
+            completion(assetPriceLists)
+        }
+    }
+    
+    func setIDParameterInURLForPrices(assets: [Asset]) -> String {
+        var idParameter = ""
+        for asset in assets {
+            idParameter.append("\(asset.id)%2C")
+        }
+        return idParameter
     }
     
 }
