@@ -108,8 +108,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return swipeActionConfig
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if !favoritesOnly {
+            return UISwipeActionsConfiguration(actions: [])
+        }
+        return nil
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            self.favorites.remove(at: indexPath.row)
+            removeFromFavorites(asset: assets[indexPath.row])
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
     
     func setupTableView() {
