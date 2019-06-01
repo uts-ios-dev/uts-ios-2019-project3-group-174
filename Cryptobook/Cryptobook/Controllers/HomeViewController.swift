@@ -105,7 +105,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { (action, view, nil) in
             self.addToFavorites(asset: asset)
-            print(self.favoritesIDs)
             tableView.reloadData()
             
         }
@@ -129,9 +128,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            self.favorites.remove(at: indexPath.row)
-            removeFromFavorites(asset: assets[indexPath.row])
+            print(indexPath.row)
+            print(favorites[indexPath.row].name)
+            removeFromFavorites(asset: favorites[indexPath.row])
+            setFavorites()
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            setFavorites()
+
+            
         }
     }
     
@@ -156,7 +160,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             self.tableView.refreshControl!.endRefreshing()
         }
-
         self.tableView.reloadData()
     }
     
