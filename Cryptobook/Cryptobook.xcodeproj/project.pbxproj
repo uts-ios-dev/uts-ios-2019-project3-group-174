@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B2A00AFE88FBA395D4935D7 /* Pods_CryptobookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33045CAE7DA3E9012AF14072 /* Pods_CryptobookTests.framework */; };
 		DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */; };
+		DEB857D922A234BE0050BD7B /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB857D822A234BE0050BD7B /* AssetViewController.swift */; };
 		DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09D228E290000329C00 /* AppDelegate.swift */; };
 		DEB8A0A0228E290000329C00 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8A09F228E290000329C00 /* HomeViewController.swift */; };
 		DEB8A0A5228E290000329C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB8A0A3228E290000329C00 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		9DAC1EFC532BB2C18CF2BCDC /* Pods-CryptobookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C446919067E22E2D950224ED /* Pods-Cryptobook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.debug.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.debug.xcconfig"; sourceTree = "<group>"; };
 		DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DEB857D822A234BE0050BD7B /* AssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
 		DEB8A09A228E290000329C00 /* Cryptobook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptobook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB8A09D228E290000329C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB8A09F228E290000329C00 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				DEB8A09F228E290000329C00 /* HomeViewController.swift */,
+				DEB857D822A234BE0050BD7B /* AssetViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */,
 				DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */,
 				DEB8A0A0228E290000329C00 /* HomeViewController.swift in Sources */,
+				DEB857D922A234BE0050BD7B /* AssetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var favoritesIDs: [String] = []
     
     let formatter = NumberFormatter()
-    private let refreshControl = UIRefreshControl()
+    
+    var refresher: UIRefreshControl {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.white
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.white,
+        ]
+        let title = NSAttributedString(string: "Fetching Data...", attributes: attributes)
+        refreshControl.attributedTitle = title
+        refreshControl.addTarget(self, action: #selector(refreshCryptoData), for: .valueChanged)
+        
+        return refreshControl
+    }
     
     //functions
     override func viewDidLoad() {
@@ -129,23 +141,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.backgroundColor = UIColor.clear
         
         // Add Refresh Control to Table View
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = refreshControl
-        } else {
-            tableView.addSubview(refreshControl)
-        }
-        tableView.refreshControl!.addTarget(self, action: #selector(refreshCryptoDataAction(_:)), for: .valueChanged)
-        tableView.refreshControl!.tintColor = UIColor.white
-        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Asset Data...")
+        tableView.refreshControl = refresher
     }
     
-    @objc private func refreshCryptoDataAction(_ sender: Any) {
-        networkingClient.getGlobalData(completion: self.setGlobalData)
-        networkingClient.getCryptocurrencies(completion: self.setAssets)
-        tableView.refreshControl!.endRefreshing()
-    }
-    
-    func refreshCryptoData() -> Void {
+    @objc func refreshCryptoData() -> Void {
         networkingClient.getGlobalData(completion: self.setGlobalData)
         networkingClient.getCryptocurrencies(completion: self.setAssets)
     }
@@ -153,6 +152,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setAssets(assets: [Asset]) -> Void {
         self.assets = assets
         setFavorites()
+        let deadline = DispatchTime.now() + .milliseconds(750)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            self.tableView.refreshControl!.endRefreshing()
+        }
+
         self.tableView.reloadData()
     }
     
