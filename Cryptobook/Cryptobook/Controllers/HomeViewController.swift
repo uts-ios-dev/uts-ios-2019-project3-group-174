@@ -209,6 +209,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return .lightContent
     }
     
+    func loadImageUsingUrlString(urlString: String) {
+        let url = URL(string: urlString)
+        //image = nil
+        if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
+            
+        }
+        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                //imageView.image = UIImage(data: data!)
+            }
+        }).resume()
+        
+    }
 }
 
 
