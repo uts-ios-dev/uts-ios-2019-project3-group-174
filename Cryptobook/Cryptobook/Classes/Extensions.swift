@@ -61,3 +61,21 @@ extension Int {
         return Int.numberFormatter.string(from: NSNumber(value: self)) ?? ""
     }
 }
+
+let imageCache = NSCache<NSString, UIImage>()
+
+extension UIImageView {
+    func loadImageUsingUrlString(urlString: String) {
+        let url = NSURL(string: urlString)
+        image = nil
+        if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
+            
+        }
+        /*URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                
+            }
+        }
+ */
+    }
+}
