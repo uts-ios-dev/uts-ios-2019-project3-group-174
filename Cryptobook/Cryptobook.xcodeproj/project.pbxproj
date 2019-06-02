@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88E45B3722A2606900211096 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E45B3622A2606900211096 /* ConversionViewController.swift */; };
 		8B2A00AFE88FBA395D4935D7 /* Pods_CryptobookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33045CAE7DA3E9012AF14072 /* Pods_CryptobookTests.framework */; };
 		DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DAF0E2293C5CA00388088 /* HomeTableViewCell.swift */; };
 		DEB857D922A234BE0050BD7B /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB857D822A234BE0050BD7B /* AssetViewController.swift */; };
@@ -58,6 +59,7 @@
 		4CBDBB962F0953FDAD41ADCE /* Pods-Cryptobook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.release.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.release.xcconfig"; sourceTree = "<group>"; };
 		533018B89F931D325A30FFAF /* Pods-CryptobookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookUITests/Pods-CryptobookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		54F059926A9A0E850AB689C8 /* Pods-CryptobookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookUITests.release.xcconfig"; path = "Target Support Files/Pods-CryptobookUITests/Pods-CryptobookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88E45B3622A2606900211096 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		99A96B2E0D405FC15AB15F30 /* Pods_CryptobookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptobookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAC1EFC532BB2C18CF2BCDC /* Pods-CryptobookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptobookTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptobookTests/Pods-CryptobookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C446919067E22E2D950224ED /* Pods-Cryptobook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptobook.debug.xcconfig"; path = "Target Support Files/Pods-Cryptobook/Pods-Cryptobook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				DEB8A09F228E290000329C00 /* HomeViewController.swift */,
 				DEB857D822A234BE0050BD7B /* AssetViewController.swift */,
+				88E45B3622A2606900211096 /* ConversionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,6 +319,10 @@
 		DEB8A092228E290000329C00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Santiago ";
@@ -497,6 +504,7 @@
 				DEB8A09E228E290000329C00 /* AppDelegate.swift in Sources */,
 				DE3DAF0F2293C5CA00388088 /* HomeTableViewCell.swift in Sources */,
 				DEB8A0A0228E290000329C00 /* HomeViewController.swift in Sources */,
+				88E45B3722A2606900211096 /* ConversionViewController.swift in Sources */,
 				DEB857D922A234BE0050BD7B /* AssetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
