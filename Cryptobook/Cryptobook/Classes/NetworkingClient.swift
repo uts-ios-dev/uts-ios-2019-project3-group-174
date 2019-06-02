@@ -33,7 +33,8 @@ class NetworkingClient {
                 }
                 if self.resultsArray.count > 0 {
                     for result in self.resultsArray {
-                        let asset: Asset = Asset(
+    
+                        let asset: Asset = Asset (
                             id: result["id"] as! String,
                             name: result["name"] as! String,
                             symbol: result["symbol"] as! String,
@@ -45,12 +46,15 @@ class NetworkingClient {
                             lastLow: result["low_24h"] as! Double,
                             priceChange: result["price_change_24h"] as! Double,
                             priceChangeInPercentage: result["price_change_percentage_24h"] as! Double,
-                            supply: result["total_supply"] as? Int ?? 000)
+                            supply: result["total_supply"] as? Int ?? 000,
+                            cSupply: result["circulating_supply"] as? Double ?? 0.0,
+                            ath: result["ath"] as! Double
+                        )
+                        
                         assets.append(asset)
                     }
                     if (self.urlForCoinPrices == "") {
                         self.urlForCoinPrices = "https://api.coingecko.com/api/v3/simple/price?ids=\(self.setIDParameterInURLForPrices(assets: assets))&vs_currencies=aud%2Cusd%2Cmxn%2Ceur%2Cgbp%2Ccad"
-                        print(self.urlForCoinPrices)
                     }
                     completion(assets)
                 }

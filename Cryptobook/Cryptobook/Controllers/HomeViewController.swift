@@ -86,6 +86,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let popup = sb.instantiateViewController(withIdentifier: "AssetPopUp") as! AssetViewController
+        if favoritesOnly {
+            popup.asset = favorites[indexPath.row]
+        } else {
+            popup.asset = assets[indexPath.row]
+        }
+        self.present(popup, animated: true)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

@@ -21,6 +21,8 @@ struct Asset {
     let priceChange : Double
     let priceChangeInPercentage : Double
     let supply : Int
+    let cSupply : Double
+    let ath : Double
 }
 
 struct GlobalData {
