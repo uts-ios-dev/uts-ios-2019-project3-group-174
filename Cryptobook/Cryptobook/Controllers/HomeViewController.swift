@@ -72,6 +72,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             return assets[indexPath.row]
         }
+        
+        loadImageUsingUrlString(urlString: asset.imageURL, imageView: cell.cellImageView!)
+        
         cell.nameLabel.text = asset.name
         cell.priceLabel.text = "$\(formatter.string(from: asset.currentPrice as NSNumber)!)"
         cell.symbolLabel.text = asset.symbol.capitalized
@@ -209,25 +212,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return .lightContent
     }
     
-    func loadImageUsingUrlString(urlString: String) {
-        let url = URL(string: urlString)
-        //image = nil
-        if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
-            
-        }
-        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-            
-            if error != nil {
-                print(error!)
-                return
-            }
-            
-            DispatchQueue.main.async {
-                //imageView.image = UIImage(data: data!)
-            }
-        }).resume()
-        
-    }
+    
 }
 
 

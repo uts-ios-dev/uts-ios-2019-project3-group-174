@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
+    var homeViewController = HomeViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         for (index, _) in viewControllers.enumerated() {
             if let viewController = viewControllers[index] as? HomeViewController {
+                if index == 0 {
+                    homeViewController = viewController
+                }
                 viewController.favoritesOnly = index == 1
             }
         }

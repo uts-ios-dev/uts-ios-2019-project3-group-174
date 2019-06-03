@@ -14,6 +14,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var dayChangeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var cellImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -11,7 +11,6 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingClient {
-    
     var resultsArray = [[String:Any]]()
     var globalDataResultsDict = [String : [String:Any]]()
     var coinPriceResultDict = [String : [String:Double]]()
@@ -20,8 +19,7 @@ class NetworkingClient {
     
     let urlForGlobalData = "https://api.coingecko.com/api/v3/global"
     
-    var urlForCoinPrices = ""
-    
+    var urlForCoinPrices: String = ""
     func getCryptocurrencies(completion: @escaping ([Asset]) -> Void) {
         var assets: [Asset] = []
         Alamofire.request(urlForCryptocurrencies).responseJSON { (responseData) -> Void in
@@ -50,11 +48,7 @@ class NetworkingClient {
                             cSupply: result["circulating_supply"] as? Double ?? 0.0,
                             ath: result["ath"] as! Double
                         )
-                        
                         assets.append(asset)
-                    }
-                    if (self.urlForCoinPrices == "") {
-                        self.urlForCoinPrices = "https://api.coingecko.com/api/v3/simple/price?ids=\(self.setIDParameterInURLForPrices(assets: assets))&vs_currencies=aud%2Cusd%2Cmxn%2Ceur%2Cgbp%2Ccad"
                     }
                     completion(assets)
                 }
@@ -93,7 +87,10 @@ class NetworkingClient {
     }
     
     func getCoinPrices(completion: @escaping ([AssetPriceList]) -> Void) {
+        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let assets = appDelegate.homeViewController.assets
         var assetPriceLists: [AssetPriceList] = []
+        self.urlForCoinPrices = "https://api.coingecko.com/api/v3/simple/price?ids=\(self.setIDParameterInURLForPrices(assets: assets))&vs_currencies=aud%2Cusd%2Cmxn%2Ceur%2Cgbp%2Ccad"
         Alamofire.request(urlForCoinPrices).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let json = JSON(responseData.result.value!)

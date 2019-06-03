@@ -22,6 +22,7 @@ class AssetViewController: UIViewController {
     @IBOutlet weak var totalSupplyLabel: UILabel!
     @IBOutlet weak var allTimeHighLabel: UILabel!
     
+    
     var asset: Asset = Asset(id: "", name: "", symbol: "", imageURL: "", currentPrice: 0.0, marketCap: 0.0 , marketCapRank: 0, lastHigh: 0.0, lastLow: 0.0, priceChange: 0.0, priceChangeInPercentage: 0.0, supply: 1, cSupply: 0.0, ath: 0.0)
     
     override func viewDidLoad() {
@@ -31,7 +32,6 @@ class AssetViewController: UIViewController {
     }
     
     func setUpData() {
-        print(asset.currentPrice)
         nameLabel.text = asset.name
         symbolLabel.text = asset.symbol.uppercased()
         rankLabel.text = "#\(asset.marketCapRank)"
@@ -53,6 +53,7 @@ class AssetViewController: UIViewController {
             totalSupplyLabel.text = "\(asset.supply)"
         } else {totalSupplyLabel.text = "N/A"}
         allTimeHighLabel.text = "$\(asset.ath)"
+        loadImageUsingUrlString(urlString: asset.imageURL, imageView: cryptoLogoImage)
     }
     @objc
     func onDrag(sender: Any) {
