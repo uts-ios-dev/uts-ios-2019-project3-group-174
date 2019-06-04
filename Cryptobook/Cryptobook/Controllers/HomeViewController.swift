@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //outlets
     @IBOutlet weak var marketCapLabelHome: UILabel!
