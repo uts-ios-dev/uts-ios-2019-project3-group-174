@@ -8,17 +8,26 @@ Cryptocurrency app that fetches top 50 currency prices and their details and all
 ## Framework
 We used **Alamofire** to make the API requests to get the information
 
-<img src="https://raw.githubusercontent.com/Alamofire/Alamofire/master/alamofire.png" width = 300 />
+<img src="https://raw.githubusercontent.com/Alamofire/Alamofire/master/alamofire.png" width = 300/>
 
 
 ## API
 We used the **CoinGecko API** to fetch the prices and other information about each coin
 
-<img src="https://static.coingecko.com/s/coingecko-logo-914bb72fab0df2d908e6123221470802f1bfac637b0f90399a3341c753f6bc52.png" width = 300 />
+<img src="https://static.coingecko.com/s/coingecko-logo-914bb72fab0df2d908e6123221470802f1bfac637b0f90399a3341c753f6bc52.png" width = 300/>
 
 
 ## JSON handler
 We used **SwiftyJSON** to handle JSON from the CoinGecko API requests
 
-<img src="https://process.filestackapi.com/cache=expiry:max/resize=width:1050/csjphnXOSuqUbaTL0WA9" width = 300 />
+<img src="https://process.filestackapi.com/cache=expiry:max/resize=width:1050/csjphnXOSuqUbaTL0WA9" width = 300/>
 
+## App screens
+### Main tab
+<img src="docs/mainScreen.png" width = 300/>
+
+### Favorites tab
+<img src="docs/favoriteTab.png" width = 300/>
+
+### Converter tab
+<img src="docs/converterTab.png" width = 300/>
