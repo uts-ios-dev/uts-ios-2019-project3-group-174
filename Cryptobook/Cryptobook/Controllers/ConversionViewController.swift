@@ -122,13 +122,9 @@ class ConversionViewController: UIViewController, UIPickerViewDataSource, UIPick
         // User pressed the delete-key to remove a character, this is always valid, return true to allow change
         
         if amountTextField.isEditing {
-            
-            
             if string.isEmpty { return true }
-            
             let currentText = textField.text ?? ""
             let replacementText = (currentText as NSString).replacingCharacters(in: range, with: string)
-            
             return replacementText.isValidDouble(maxDecimalPlaces: 5)
         }
         return false
@@ -140,6 +136,7 @@ class ConversionViewController: UIViewController, UIPickerViewDataSource, UIPick
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
+    
     //adjust the keyboard in every device
     @objc func adjustForKeyboard(notification: Notification) {
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {

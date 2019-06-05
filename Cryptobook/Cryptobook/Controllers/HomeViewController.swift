@@ -12,19 +12,25 @@ import Alamofire
 import SwiftyJSON
 
 
+/// HomeViewController manages both Homeview and Favorites
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //outlets
     @IBOutlet weak var marketCapLabelHome: UILabel!
     @IBOutlet weak var BtcdLabelHome: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    //variables
+    /// variables
+    // defaults: calls access to UserDefaults.standard to store favorite IDs
+    // at favorites_IDs
     var defaults = UserDefaults.standard
     let favoritesKeyString = "favorites_IDs"
     
+    // NetworkingClient instance to call for the asset list and global data.
     let networkingClient: NetworkingClient = NetworkingClient()
     
+    // favoritesOnly checks whether the accessed view means to display all assets or only favorites
     var favoritesOnly: Bool = false
+    
     var globalData: GlobalData = GlobalData(totalMarketCap: "0", btcDominance: "0")
     var assets: [Asset] = []
     var favorites: [Asset] = []
@@ -32,6 +38,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let formatter = NumberFormatter()
     
+    // refresher to update the table view by pulling down.
     var refresher: UIRefreshControl {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = UIColor.white
@@ -57,6 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 1
     }
     
+    // number of rows changes depending on the view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if favoritesOnly {
             return self.favorites.count
@@ -64,6 +72,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return self.assets.count
     }
     
+    // loads tableview with images using a function in the extensions file.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableCell", for: indexPath) as! HomeTableViewCell
         
@@ -90,6 +99,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    // When a row is selected, calls the storyboard and presents popup with asset clicked.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let popup = sb.instantiateViewController(withIdentifier: "AssetPopUp") as! AssetViewController
@@ -105,16 +115,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+    // Refresh data everytime a view appears
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         refreshCryptoData()
-        
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     // Leading Actions in Row
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let asset = self.assets[indexPath.row]
@@ -124,7 +135,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.reloadData()
             
         }
-        
         favoriteAction.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         let swipeActionConfig = UISwipeActionsConfiguration(actions: [favoriteAction])
         swipeActionConfig.performsFirstActionWithFullSwipe = false
